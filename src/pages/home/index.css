@@ -1,6 +1,6 @@
-.main {
+.home {
   flex: 1 0 auto;
-  padding: var(--space-lg) var(--space-xl);
+  padding: var(--space-xl);
   background: center / cover no-repeat url("./img/img-bg.jpg");
   display: flex;
   flex-direction: column;
@@ -10,10 +10,10 @@
   text-align: center;
 }
 
-.main .title {
+.home .title {
   color: var(--color-primary);
 }
 
-.main .subtitle {
+.home .subtitle {
   color: var(--white);
 }
