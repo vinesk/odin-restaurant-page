@@ -1,17 +1,20 @@
 import "./index.css";
+import loadHome from "../home";
+import loadMenu from "../menu";
 
-const header = () => {
-  return `
-  <header class="header">
-    <a href="#" class="logo">
-      <h1>Odin Pizza</h1>
-    </a>
-    <nav class="nav">
-      <a href="#">Accueil</a>
-      <a href="#">Menu</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>`;
+const createHeader = () => {
+  const header = document.createElement("header");
+  header.classList.add("header");
+  header.innerHTML = `
+  <a href="#">
+    <h1>Odin Pizza</h1>
+  </a>
+  <nav class="nav">
+    <a id="home" href="#">Accueil</a>
+    <a id="menu" href="#">Menu</a>
+  </nav>`;
+
+  return header;
 };
 
-export default header;
+export default createHeader;

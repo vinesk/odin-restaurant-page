@@ -2,18 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
-  background-color: var(--black);
   padding: var(--space-md) var(--space-xl);
+  background-color: var(--color-primary);
+  color: var(--white);
 }
 
 .footer a {
   display: flex;
   align-items: center;
-}
-
-.footer a svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: currentColor;
 }

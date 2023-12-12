@@ -18,9 +18,9 @@
   /* Font sizes */
   --font-size-body: 1rem;
   --font-size-h1: 3rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.25rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.5rem;
 
   /* Spaces */
   --space-xs: 0.25rem;
@@ -31,6 +31,10 @@
 
   /* Border radius */
   --border-radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Body */
@@ -75,19 +79,9 @@ h4 {
   cursor: pointer;
 }
 
-.btn-primary {
-  color: var(--white);
-  background-color: var(--color-primary);
-}
-
 /* Links */
 a {
   color: inherit;
   text-decoration: none;
   transition: all 0.2s ease;
-}
-
-a:hover,
-a:focus {
-  color: var(--color-primary);
 }

@@ -1,0 +1,39 @@
+.menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  background-color: var(--white);
+  border: 0.5rem solid var(--color-secondary);
+  border-radius: var(--border-radius);
+}
+
+.menu .pizza {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-lg);
+  grid-template-areas:
+    "icon title        price"
+    "icon description  price";
+  width: 100%;
+}
+
+.menu .pizza .icon {
+  grid-area: icon;
+  width: 4rem;
+  height: 4rem;
+}
+
+.menu .pizza .title {
+  grid-area: title;
+}
+
+.menu .pizza .description {
+  grid-area: description;
+}
+
+.menu .pizza .price {
+  grid-area: price;
+}

@@ -1,13 +1,24 @@
-import "./styles/style.css";
-import header from "./components/header";
-import home from "./pages/home";
-import menu from "./pages/menu";
-import contact from "./pages/contact";
-import footer from "./components/footer";
+import "./styles/index.css";
+import createHeader from "./components/header";
+import createMain from "./components/main";
+import createFooter from "./components/footer";
+import loadHome from "./components/home";
+import loadMenu from "./components/menu";
 
-const content = document.querySelector("#content");
+function initializeWebsite() {
+  const content = document.querySelector("#content");
+  content.appendChild(createHeader());
+  content.appendChild(createMain());
+  content.appendChild(createFooter());
 
-content.innerHTML = `
-  ${header()}
-  ${menu()}
-  ${footer()}`;
+  loadHome();
+
+  const links = document.querySelectorAll(".nav a");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.target.id === "home" ? loadHome() : loadMenu();
+    });
+  });
+}
+
+initializeWebsite();
